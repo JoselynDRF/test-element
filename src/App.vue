@@ -5,7 +5,11 @@
     </header>
 
     <main>
-      <element-form />
+      <!-- <element-form /> -->
+      <!-- <el-dialog visible="true"> -->
+      <el-dialog model-value="true">
+        Content
+      </el-dialog>
     </main>
   </div>
 </template>
@@ -15,6 +19,6 @@ import ElementForm from './components/ElementForm.vue'
 
 export default {
   name: 'App',
-  components: { ElementForm }
+  components: { ElementForm },
 }
 </script>

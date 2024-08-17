@@ -5,16 +5,19 @@
     </header>
 
     <main>
-      <element-form />
+      <span>Hello!</span>
+      <el-button>Button</el-button>
+      <!-- <element-form /> -->
     </main>
   </div>
 </template>
 
 <script>
-import ElementForm from './components/ElementForm.vue'
+import { defineComponent } from 'vue'
+// import ElementForm from './components/ElementForm.vue'
 
-export default {
+export default defineComponent({
   name: 'App',
-  components: { ElementForm }
-}
+  // components: { ElementForm }
+})
 </script>

@@ -5,11 +5,11 @@
     </header>
 
     <main>
-      <!-- <element-form /> -->
+      <element-form />
       <!-- <el-dialog visible="true"> -->
-      <el-dialog model-value="true">
+      <!-- <el-dialog model-value="true">
         Content
-      </el-dialog>
+      </el-dialog> -->
     </main>
   </div>
 </template>

@@ -5,7 +5,8 @@
     </header>
 
     <main>
-      <element-form />
+      <h3>v-model sync: {{ pageTitle }}</h3>
+      <element-form :title.sync="pageTitle" />
       <!-- <el-dialog visible="true"> -->
       <!-- <el-dialog model-value="true">
         Content
@@ -20,5 +21,10 @@ import ElementForm from './components/ElementForm.vue'
 export default {
   name: 'App',
   components: { ElementForm },
+  data () {
+    return {
+      pageTitle: 'Title default'
+    }
+  }
 }
 </script>

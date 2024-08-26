@@ -5,7 +5,7 @@
     <span>Element Plus Vue 3:</span>
     <el-form ref="form" :model="form" label-width="120px">
       <el-form-item label="Activity name">
-        <el-input v-model="form.name"></el-input>
+        <el-input v-model="form.name" @input="updateTitle($event)"></el-input>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit">Create</el-button>
@@ -30,6 +30,11 @@ export default {
       return 'EUR ' + value
     }
   },
+  props: {
+    title: {
+      type: String
+    }
+  },
   data() {
     return {
       amount: 100,
@@ -39,6 +44,9 @@ export default {
     }
   },
   methods: {
+    updateTitle(title) {
+      this.$emit('update:title', title)
+    },
     onSubmit() {
       console.log('submit!', this.form);
     }
